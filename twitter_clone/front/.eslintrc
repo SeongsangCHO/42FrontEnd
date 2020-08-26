@@ -1,0 +1,28 @@
+///.eslintrc파일만 만드는게 아니라
+//설정파일로 eslint 연동해야함
+
+{
+  "parserOptions":{
+    "ecmaVersion":2020,
+    "sourceType": "module",
+    "ecmaFeatures":{
+      "jsx":true
+    }
+  },
+  "env":{
+    "brower":true,
+    "node":true,
+    "es6":true
+  },
+  "extends":[
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "plugins":[
+    "import",
+    "react-hooks"
+  ],
+  "rules":{
+    
+  }
+}
