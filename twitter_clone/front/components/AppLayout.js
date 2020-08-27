@@ -1,14 +1,26 @@
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { Menu , Input, Row, Col} from 'antd';
 //next는 자체적인 라우팅
-
-
+import styled from 'styled-components';
+import UserProfile from '../components/UserProfile';
+import LoginForm from '../components/LoginForm';
 //AppLayout으로 감싸진 컴포넌트들이
 //{children}으로  들어가서 화면을 출력해줌
 
 
+//가져온 컴포넌트 커스텀 스타일링하기
+const SearchInput = styled(Input.Search)`
+  vertical-align: middle;
+`;
+
 const AppLayout = ({ children }) => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  
+//useCallback = 함수캐싱
+  //useMemo = 값 캐싱
   return (
     <div>
       <Menu mode='horizontal'>
@@ -22,7 +34,7 @@ const AppLayout = ({ children }) => {
          <Link href="/Signup"><a>Signup</a></Link>
         </Menu.Item>
         <Menu.Item>
-          <Input.Search enterButton style={{ verticalAlign:'middle'}} />
+          <SearchInput enterButton></SearchInput>
         </Menu.Item>
       </Menu>
 
@@ -36,7 +48,7 @@ const AppLayout = ({ children }) => {
          xs, md에 따라 차지하는 등분 수를 구분하여 반응형 구현
          */}
         <Col xs={24} md={6}>
-          왼쪽 메뉴
+          {isLoggedIn ? <UserProfile/> : <LoginForm/>}
         </Col>
         <Col xs={24} md={12}>
           가운데 메뉴
