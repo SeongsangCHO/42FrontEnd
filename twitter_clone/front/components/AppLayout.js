@@ -6,6 +6,8 @@ import { Menu , Input, Row, Col} from 'antd';
 import styled from 'styled-components';
 import UserProfile from '../components/UserProfile';
 import LoginForm from '../components/LoginForm';
+import Signup from '../components/LoginForm';
+
 //AppLayout으로 감싸진 컴포넌트들이
 //{children}으로  들어가서 화면을 출력해줌
 
@@ -48,7 +50,7 @@ const AppLayout = ({ children }) => {
          xs, md에 따라 차지하는 등분 수를 구분하여 반응형 구현
          */}
         <Col xs={24} md={6}>
-          {isLoggedIn ? <UserProfile/> : <LoginForm/>}
+          {isLoggedIn ? <UserProfile setIsLoggedIn={setIsLoggedIn} /> : <LoginForm setIsLoggedIn={setIsLoggedIn}/>}
         </Col>
         <Col xs={24} md={12}>
           가운데 메뉴
