@@ -21,3 +21,18 @@ function count(obj) {
   return Object.keys(obj).length;
 }
 console.log(count(user));
+
+
+let [firstName, , title] = ["Julius", "Caesar", "Consul", "of the Roman Republic"];
+
+console.log(firstName);
+console.log(title);
+
+
+let [name1, name2, ...rest] = ["Julius", "Caesar", "Consul", "of the Roman Republic"];
+
+
+// `rest`는 배열입니다.
+console.log(rest[0]); // Consul
+console.log(rest[1]); // of the Roman Republic
+console.log(rest.length); // 2
