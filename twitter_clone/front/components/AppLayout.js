@@ -36,7 +36,7 @@ const AppLayout = ({ children }) => {
          <Link href="/Signup"><a>Signup</a></Link>
         </Menu.Item>
         <Menu.Item>
-          <SearchInput enterButton></SearchInput>
+          <SearchInput enterButton="Search"></SearchInput>
         </Menu.Item>
       </Menu>
 
