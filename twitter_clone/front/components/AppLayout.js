@@ -7,6 +7,8 @@ import styled from 'styled-components';
 import UserProfile from '../components/UserProfile';
 import LoginForm from '../components/LoginForm';
 import Signup from '../components/LoginForm';
+import PostCardForm from '../components/PostCardForm';
+
 
 //AppLayout으로 감싸진 컴포넌트들이
 //{children}으로  들어가서 화면을 출력해줌
@@ -53,7 +55,7 @@ const AppLayout = ({ children }) => {
           {isLoggedIn ? <UserProfile setIsLoggedIn={setIsLoggedIn} /> : <LoginForm setIsLoggedIn={setIsLoggedIn}/>}
         </Col>
         <Col xs={24} md={12}>
-          가운데 메뉴
+          {isLoggedIn && <PostCardForm />}
         </Col>
         <Col xs={24} md={6}>
           <a href="https://velog.io/@secho" target="_blank" rel="noreferrer noopener">
