@@ -11,23 +11,26 @@
   <!-- font awesome image Load-->
   <script src="https://kit.fontawesome.com/27f00002ab.js" crossorigin="anonymous"></script>
 </head>
+
+<nav class="top-navBar">
+  <ul>
+    <li><a><i class="fab fa-apple" style="font-size: 20px; color:aliceblue"></i></a></li>
+    <li><a>Mac</a></li>
+    <li><a>iPad</a></li>
+    <li><a>iPhone</a></li>
+    <li><a>Watch</a></li>
+    <li><a>Music</a></li>
+    <li><a>고객지원</a></li>
+    <li><a><i class="fas fa-search" style="font-size: 20px; color:aliceblue"></i></a></li>
+    <li><a><i class="fas fa-shopping-bag" style="font-size: 20px; color:aliceblue"></i></a></li>
+  </ul>
+    <a></a>
+</nav>
+
 <body>
 
   <!--Top Nav Bar-->
-  <nav class="top-navBar">
-    <ul>
-      <li><a><i class="fab fa-apple" style="font-size: 20px; color:aliceblue"></i></a></li>
-      <li><a>Mac</a></li>
-      <li><a>iPad</a></li>
-      <li><a>iPhone</a></li>
-      <li><a>Watch</a></li>
-      <li><a>Music</a></li>
-      <li><a>고객지원</a></li>
-      <li><a><i class="fas fa-search" style="font-size: 20px; color:aliceblue"></i></a></li>
-      <li><a><i class="fas fa-shopping-bag" style="font-size: 20px; color:aliceblue"></i></a></li>
-    </ul>
-      <a></a>
-  </nav>
+
 
   <section class="covid-section">
     <p>
@@ -133,14 +136,107 @@ align-items	교차 축(cross-axis)에서 Items의 정렬 방법을 설정(1줄)
 컨테이너 : flex 지정, flex-wrap으로 여러줄 묶음(줄바꿈)을 진행해야겠다
 row당, 자식래퍼 2개씩 :flex 1을 주어서 div 두개로 각 상품을 넣어주기
 
-자식래퍼 : 전체를 담을 래퍼
-  - 전체를 감싸는 a태그
-  - 자식래퍼 : 상단 설명글 래퍼
+자식래퍼 : 전체를 담을 래퍼 (collection-module)
+  자식-grid-wrapper
+  - 전체를 감싸는 a태그(unit-link)
+  - 자식래퍼 : 상단 설명글 래퍼(content-wrapper)
     -h2, h3, a태그
-  - image래퍼
+  - image래퍼(image-wrapper)
     - background이미지
-
 -->
+  <div class="grid-wrapper"><!--개당 580height-->
+    <div class="unit-wrapper theme-gray-background">
+      <a class="unit-link" href="#unit-link">&nbsp;</a>
+      <div class="grid-content-wrapper">
+        <h4 class="headline">iMac</h2>
+        <h5>모든 이에게 맞는, 모든 것을 갖춘 컴퓨터</h3>
+        <a class="after-link" href="#after-link">더 알아보기 ></a>
+        <a class="after-link" href="#after-link2">구입하기 ></a>
+      </div>
+     </div>
+    <div class="image-wrapper">
+      <div id="iMac-image"></div>
+    </div>
+  </div>
+
+  <div class="grid-wrapper"><!--개당 580height-->
+    <div class="unit-wrapper theme-dark-background">
+      <a class="unit-link" href="#unit-link">&nbsp;</a>
+      <div class="grid-content-wrapper">
+        <h4 class="white-sentence">iPhone 11 Pro</h2>
+        <h5 class="white-sentence">프로급 카메라. 프로급 디스플레이. 프로급 성능.</h3>
+        <p class="price">보상판매시 ₩1,130,000부터</p>
+        <a class="after-link" href="#after-link">더 알아보기 ></a>
+        <a class="after-link" href="#after-link2">구입하기 ></a>
+      </div>
+     </div>
+    <div class="image-wrapper">
+      <div id="iphone-11-pro-image"></div>
+    </div>
+  </div>
+
+
+
+  <div class="grid-wrapper"><!--개당 580height-->
+    <div class="unit-wrapper theme-whitegray-background">
+      <a class="unit-link" href="#unit-link">&nbsp;</a>
+      <div class="grid-content-wrapper">
+        <h4>iMac</h2>
+        <h5>새로운 상시표시형 Retina 디스플레이.</h3>
+        <a class="after-link" href="#after-link">더 알아보기 ></a>
+        <a class="after-link" href="#after-link2">구입하기 ></a>
+      </div>
+     </div>
+    <div class="image-wrapper">
+      <div id="apple-watch-image"></div>
+    </div>
+  </div>
+
+  <div class="grid-wrapper"><!--개당 580height-->
+    <div class="unit-wrapper theme-dark-background">
+      <a class="unit-link" href="#unit-link">&nbsp;</a>
+      <div class="grid-content-wrapper">
+        <h4 class="white-sentence">MacBook Pro</h2>
+        <h5 class="white-sentence">어떤 일이든. 어디에서든.</h3>
+        <a class="after-link" href="#after-link">더 알아보기 ></a>
+        <a class="after-link" href="#after-link2">구입하기 ></a>
+      </div>
+     </div>
+    <div class="image-wrapper">
+      <div id="macbook-pro-image"></div>
+    </div>
+  </div>
+
+  <div class="grid-wrapper"><!--개당 580height-->
+    <div class="unit-wrapper theme-whitegray-background">
+      <a class="unit-link" href="#unit-link">&nbsp;</a>
+      <div class="grid-content-wrapper">
+        <h4>자신만의 것이라는 증표.</h2>
+        <h5>무료 각인 서비스, 세상 하나뿐인 <br>
+        자신만의 AirPods을 만드는 법.<br>
+      오직 Apple에서만.</h3>
+        <a class="after-link" href="#after-link">더 알아보기 ></a>
+        <a class="after-link" href="#after-link2">구입하기 ></a>
+      </div>
+     </div>
+    <div class="image-wrapper">
+      <div id="airpod-pro-image"></div>
+    </div>
+  </div>
+
+  <div class="grid-wrapper"><!--개당 580height-->
+    <div class="unit-wrapper theme-whitegray-background">
+      <a class="unit-link" href="#unit-link">&nbsp;</a>
+      <div class="grid-content-wrapper">
+        <h4>Apple은 매장 영업 재개를<br>
+        이렇게 하고자 합니다</h2>
+        <a class="after-link" href="#after-link2">Apple이 전해드리는 메시지 > ></a>
+      </div>
+     </div>
+    <div class="image-wrapper">
+      <div id="apple-logo-image"></div>
+    </div>
+  </div>
   </section>
 <footer>
 

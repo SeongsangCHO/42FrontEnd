@@ -10,6 +10,9 @@ html {
   padding: 0;
 }
 
+body{
+  padding-top: 75px;
+}
 .white-sentence {
   color: #fff;
 }
@@ -46,9 +49,14 @@ html {
   letter-spacing: -0.03em;
 }
 .top-navBar {
+  width: 100%;
   background-color: #333333;
   height: 48px;
   overflow: visible;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
 }
 
 nav > ul {
@@ -88,10 +96,12 @@ nav > ul > li > a {
 a:hover {
   opacity: 1;
 }
-#iphone-se, #iPad, #iphone-11{
+#iphone-se,
+#iPad,
+#iphone-11 {
   position: relative;
   width: 100%;
-  flex:1;
+  flex: 1;
   height: 100%;
 }
 /*flex-direction으로 방향지정*/
@@ -141,7 +151,7 @@ a:hover {
 /* 전체를 감싸는 a unit-link클래스가 after-link를 제외하고 어느부분을 갖다대도
 먹혀야하는데 content-wrapper영역에서는 z-index를 지정해주어도 먹히질 않음..  */
 .after-link {
-  z-index: 2;
+  z-index: 3;
   color: #2997ff;
   text-decoration: none;
   font-weight: 400;
@@ -169,7 +179,6 @@ a:hover {
     display: none;
   }
 }
-
 
 div > #iphone-se-image {
   position: absolute;
@@ -216,7 +225,132 @@ div > #ipad-image {
   background-image: url("./imgs/ipad.jpg");
 }
 
-
-
 /* 하단 섹션 */
 
+
+.collection-module {
+  display: grid;
+  row-gap: 0px; /*행사이 간격*/
+  column-gap: 0px; /*열 사이 간격*/
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-wrapper{
+  position: relative;
+  margin-top: 10px;
+  width: 100%;
+  height: 655px;
+}
+.grid-content-wrapper{
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  z-index: 2;
+}
+.unit-wrapper.theme-gray-background{
+  background-color: #f2f2f2;
+}
+.unit-wrapper.theme-whitegray-background{
+  background-color: #FAFAFA;
+}
+
+/* h4의 headline만 특정하고 싶은데 흠. */
+h4 .headline{
+  font-size: 15px;
+}
+div > #iMac-image{
+  position: absolute;
+  overflow: hidden;
+  width: 634px;
+  height: 431px;
+  top: 30%;
+  right: auto;
+  left: 50%;
+  /* x축만큼 -50%만큼 이동 */
+  transform: translate(-50%);
+  background-position: center;
+  background-size: 634px 431px;
+  background-repeat: no-repeat;
+  background-image: url("./imgs/iMac.jpg");
+}
+
+div > #iphone-11-pro-image{
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 655px;
+  top: 0%;
+  right: auto;
+  left: 50%;
+  /* x축만큼 -50%만큼 이동 */
+  transform: translate(-50%);
+  background-position: center;
+  background-size: 1260px 655px;
+  background-repeat: no-repeat;
+  background-image: url("./imgs/iphone-11-pro.jpg");
+}
+
+div > #apple-watch-image{
+  position: absolute;
+  overflow: hidden;
+  width: 532px;
+  height: 386px;
+  top: 30%;
+  right: auto;
+  left: 50%;
+  /* x축만큼 -50%만큼 이동 */
+  transform: translate(-50%);
+  background-position: center;
+  background-size: 532px 386px;
+  background-repeat: no-repeat;
+  background-image: url("./imgs/apple-watch.jpg");
+}
+
+div > #macbook-pro-image{
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 650px;
+  top: 0%;
+  right: auto;
+  left: 50%;
+  /* x축만큼 -50%만큼 이동 */
+  transform: translate(-50%);
+  background-position: center;
+  background-size: 2000px 784px;
+  background-repeat: no-repeat;
+  background-image: url("./imgs/macbook-pro.jpg");
+}
+
+div > #airpod-pro-image{
+  position: absolute;
+  overflow: hidden;
+  width: 555px;
+  height: 356px;
+  top: 35%;
+  right: auto;
+  left: 50%;
+  /* x축만큼 -50%만큼 이동 */
+  transform: translate(-50%);
+  background-position: center;
+  background-size: 555px 356px;
+  background-repeat: no-repeat;
+  background-image: url("./imgs/airpod-pro.jpg");
+}
+
+
+div > #apple-logo-image{
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 580px;
+  top: -5%;
+  right: auto;
+  left: 50%;
+  /* x축만큼 -50%만큼 이동 */
+  transform: translate(-50%);
+  background-position: center;
+  background-size: 1365px 580px;
+  background-repeat: no-repeat;
+  background-image: url("./imgs/apple-log.jpg");
+}
