@@ -16,10 +16,12 @@ body{
 .white-sentence {
   color: #fff;
 }
-.white-sentence.headline {
+.white-sentence.headline,
+.black-sentence.headline {
   font-size: 56px;
 }
-.white-sentence.subhead {
+.white-sentence.subhead,
+.black-sentence.subhead{
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -34,15 +36,17 @@ body{
 .black-sentence {
   color: #131313;
 }
-.black-sentence.headline {
-  font-size: 56px;
+
+
+.black-sentence.promos-headline, .white-sentence.promos-headline{
+  font-size: 40px;
 }
-.black-sentence.subhead {
+.black-sentence.promos-subhead, .white-sentence.promos-subhead{
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   max-width: 480px;
-  font-size: 28px;
+  font-size: 21px;
   margin-top: 6px;
   font-weight: 400;
   /* 자간 */
@@ -199,7 +203,7 @@ div > #iphone-se-image {
 div > #iphone-11-image {
   position: absolute;
   overflow: hidden;
-  width: 2618px;
+  width: 100%;
   height: 626px;
   top: 15%;
   right: auto;
@@ -245,6 +249,7 @@ div > #ipad-image {
   width: 100%;
   position: absolute;
   text-align: center;
+  padding-top: 53px;
   z-index: 2;
 }
 .unit-wrapper.theme-gray-background{
@@ -255,9 +260,7 @@ div > #ipad-image {
 }
 
 /* h4의 headline만 특정하고 싶은데 흠. */
-h4 .headline{
-  font-size: 15px;
-}
+
 div > #iMac-image{
   position: absolute;
   overflow: hidden;
@@ -327,7 +330,7 @@ div > #airpod-pro-image{
   overflow: hidden;
   width: 555px;
   height: 356px;
-  top: 35%;
+  top: 42%;
   right: auto;
   left: 50%;
   /* x축만큼 -50%만큼 이동 */
@@ -344,7 +347,7 @@ div > #apple-logo-image{
   overflow: hidden;
   width: 100%;
   height: 580px;
-  top: -5%;
+  top: 4%;
   right: auto;
   left: 50%;
   /* x축만큼 -50%만큼 이동 */
@@ -353,4 +356,94 @@ div > #apple-logo-image{
   background-size: 1365px 580px;
   background-repeat: no-repeat;
   background-image: url("./imgs/apple-log.jpg");
+}
+
+footer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #f5f5f7;
+}
+
+
+footer > div{
+  padding-top:20px;
+  max-width: 980px;
+}
+
+#foot-note-1{
+  font-size: 0.75em;
+  color: #86868b;
+  padding-bottom: 15px;
+}
+
+.footer-nav-5-columns{
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.footer-list-wrapper{
+  padding-top: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+footer > div > nav > div > ul{
+  list-style: none;
+  
+}
+footer > div > nav > div > ul > li{
+  margin-bottom: 10px;
+  color: #86868b;
+  font-size:12px;
+  cursor: pointer;
+}
+footer > div > nav > div > h3 {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.footer-info{
+  padding-top: 30px;
+}
+
+.footer-info-2{
+  padding-top: 15px;
+}
+
+.copyright{
+  display: inline;
+}
+.copyright h5{
+  display:inline;
+}
+
+.footer-legal-link{
+  display: inline;
+  font-size: 12px;
+  margin-left: 30px;
+}
+
+.footer-legal-tag{
+  padding:10px;
+  text-decoration: none;
+  color: #86868b;
+}
+
+.footer-nation{
+  display: inline;
+  float: right;
+}
+.footer-nation h5{
+  display: inline;
+}
+
+.footer-company-info{
+  padding-top: 5px;
+}
+#foot-note-company-info{
+  font-size: 10.5px;
+  color: #86868b;
+  padding-bottom: 15px;
 }
